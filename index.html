@@ -1,0 +1,1846 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LegalPlus | FamilySoft SupportCalc &mdash; Court-Trusted Child Support Software for Attorneys</title>
+  <meta name="description" content="FamilySoft SupportCalc by LegalPlus: court-approved child support calculation software trusted by family law attorneys in CA, WA, PA, WV &amp; NY for 36+ years. Start your free trial today.">
+  <meta property="og:title" content="LegalPlus | FamilySoft SupportCalc &mdash; Court-Trusted Child Support Software">
+  <meta property="og:description" content="36+ years of court-approved child support calculations. Trusted by thousands of family law attorneys across 5 states. Cloud &amp; Desktop.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.legalplus.com/">
+  <link rel="canonical" href="https://www.legalplus.com/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:wght@700;900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy: #1e3a5f;
+      --navy-dark: #152c4a;
+      --navy-light: #2a4f7a;
+      --gold: #c8973e;
+      --gold-light: #dbb06a;
+      --gold-bg: #fdf8f0;
+      --slate: #475569;
+      --light-gray: #f8fafc;
+      --border: #e2e8f0;
+      --white: #ffffff;
+      --text: #1e293b;
+      --text-muted: #64748b;
+      --success: #16a34a;
+      --radius: 12px;
+      --shadow: 0 1px 3px rgba(0,0,0,.08), 0 4px 12px rgba(0,0,0,.04);
+      --shadow-lg: 0 4px 24px rgba(0,0,0,.1);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      color: var(--text);
+      line-height: 1.6;
+      background: var(--white);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    h1, h2, h3 { font-family: 'Merriweather', Georgia, serif; }
+
+    /* ── Utility bar ── */
+    .utility-bar {
+      background: var(--navy-dark);
+      color: rgba(255,255,255,.8);
+      font-size: .8125rem;
+      padding: .5rem 0;
+    }
+    .utility-bar .inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: .5rem;
+    }
+    .utility-bar a {
+      color: var(--gold-light);
+      text-decoration: none;
+    }
+    .utility-bar a:hover { text-decoration: underline; }
+    .utility-contact { display: flex; gap: 1.25rem; align-items: center; }
+    .utility-contact svg { width: 14px; height: 14px; vertical-align: -2px; margin-right: 4px; }
+
+    /* ── Nav ── */
+    .site-nav {
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 1px 4px rgba(0,0,0,.04);
+    }
+    .nav-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 72px;
+    }
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: .75rem;
+      text-decoration: none;
+      color: var(--navy);
+    }
+    .nav-brand .logo-mark {
+      width: 40px;
+      height: 40px;
+      background: var(--navy);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--gold);
+      font-weight: 900;
+      font-size: 1.125rem;
+      font-family: 'Merriweather', serif;
+    }
+    .nav-brand-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.15;
+    }
+    .nav-brand-name {
+      font-family: 'Merriweather', serif;
+      font-weight: 900;
+      font-size: 1.25rem;
+      color: var(--navy);
+    }
+    .nav-brand-sub {
+      font-size: .7rem;
+      color: var(--text-muted);
+      letter-spacing: .04em;
+      text-transform: uppercase;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: .25rem;
+      list-style: none;
+    }
+    .nav-links a {
+      display: block;
+      padding: .5rem .875rem;
+      color: var(--slate);
+      text-decoration: none;
+      font-size: .875rem;
+      font-weight: 500;
+      border-radius: 8px;
+      transition: background .15s, color .15s;
+    }
+    .nav-links a:hover { background: var(--light-gray); color: var(--navy); }
+
+    .nav-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: .375rem;
+      background: var(--gold);
+      color: var(--white) !important;
+      padding: .625rem 1.25rem !important;
+      border-radius: 8px !important;
+      font-weight: 600 !important;
+      transition: background .15s, transform .1s !important;
+    }
+    .nav-cta:hover { background: var(--gold-light) !important; transform: translateY(-1px); }
+
+    /* Mobile menu */
+    .mobile-toggle {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: .5rem;
+    }
+    .mobile-toggle svg { width: 24px; height: 24px; color: var(--navy); }
+
+    @media (max-width: 900px) {
+      .mobile-toggle { display: block; }
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 72px;
+        left: 0;
+        right: 0;
+        background: var(--white);
+        flex-direction: column;
+        padding: 1rem;
+        border-bottom: 1px solid var(--border);
+        box-shadow: var(--shadow-lg);
+      }
+      .nav-links.open { display: flex; }
+      .nav-links a { padding: .75rem 1rem; width: 100%; }
+    }
+
+    /* ── Hero ── */
+    .hero {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 60%, #3b6da1 100%);
+      color: var(--white);
+      padding: 5rem 1.5rem 4rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      top: -40%;
+      right: -10%;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(200,151,62,.12) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: .375rem;
+      background: rgba(255,255,255,.1);
+      border: 1px solid rgba(255,255,255,.15);
+      border-radius: 100px;
+      padding: .375rem 1rem;
+      font-size: .8125rem;
+      font-weight: 500;
+      margin-bottom: 1.5rem;
+      backdrop-filter: blur(8px);
+    }
+    .hero-badge .dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--gold);
+    }
+    .hero h1 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 900;
+      line-height: 1.15;
+      margin-bottom: 1.25rem;
+    }
+    .hero h1 span { color: var(--gold-light); }
+    .hero-desc {
+      font-size: 1.125rem;
+      line-height: 1.7;
+      color: rgba(255,255,255,.85);
+      margin-bottom: 2rem;
+      max-width: 520px;
+    }
+    .hero-actions {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-bottom: 2.5rem;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      font-weight: 600;
+      font-size: .9375rem;
+      padding: .875rem 1.75rem;
+      border-radius: 8px;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: all .15s;
+    }
+    .btn-gold {
+      background: var(--gold);
+      color: var(--white);
+    }
+    .btn-gold:hover { background: var(--gold-light); transform: translateY(-1px); box-shadow: 0 4px 16px rgba(200,151,62,.35); }
+    .btn-outline {
+      background: transparent;
+      color: var(--white);
+      border: 1.5px solid rgba(255,255,255,.3);
+    }
+    .btn-outline:hover { border-color: rgba(255,255,255,.6); background: rgba(255,255,255,.05); }
+    .btn-navy {
+      background: var(--navy);
+      color: var(--white);
+    }
+    .btn-navy:hover { background: var(--navy-dark); }
+    .btn-white {
+      background: var(--white);
+      color: var(--navy);
+    }
+    .btn-white:hover { background: var(--light-gray); }
+
+    .hero-stats {
+      display: flex;
+      gap: 2.5rem;
+    }
+    .hero-stat {
+      text-align: left;
+    }
+    .hero-stat-num {
+      font-family: 'Merriweather', serif;
+      font-weight: 900;
+      font-size: 1.75rem;
+      color: var(--gold-light);
+    }
+    .hero-stat-label {
+      font-size: .8125rem;
+      color: rgba(255,255,255,.65);
+    }
+
+    /* Hero right — product preview */
+    .hero-visual {
+      position: relative;
+    }
+    .product-preview {
+      background: var(--white);
+      border-radius: 16px;
+      box-shadow: 0 24px 60px rgba(0,0,0,.25);
+      overflow: hidden;
+      position: relative;
+    }
+    .preview-topbar {
+      background: #f1f5f9;
+      padding: .75rem 1rem;
+      display: flex;
+      align-items: center;
+      gap: .5rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .preview-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+    }
+    .preview-dot.red { background: #f87171; }
+    .preview-dot.yellow { background: #fbbf24; }
+    .preview-dot.green { background: #4ade80; }
+    .preview-url {
+      flex: 1;
+      background: var(--white);
+      border-radius: 6px;
+      padding: .25rem .75rem;
+      font-size: .75rem;
+      color: var(--text-muted);
+      margin-left: .5rem;
+    }
+    .preview-body {
+      padding: 1.5rem;
+      background: var(--white);
+    }
+    .preview-body h4 {
+      font-family: 'Merriweather', serif;
+      color: var(--navy);
+      margin-bottom: .75rem;
+      font-size: .9375rem;
+    }
+    .preview-calc {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: .75rem;
+      margin-bottom: 1rem;
+    }
+    .preview-field {
+      background: var(--light-gray);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: .5rem .75rem;
+    }
+    .preview-field-label {
+      font-size: .625rem;
+      text-transform: uppercase;
+      letter-spacing: .05em;
+      color: var(--text-muted);
+      margin-bottom: .125rem;
+    }
+    .preview-field-value {
+      font-size: .875rem;
+      font-weight: 600;
+      color: var(--text);
+    }
+    .preview-result {
+      background: var(--gold-bg);
+      border: 1px solid #e9d5a8;
+      border-radius: 8px;
+      padding: .75rem 1rem;
+      text-align: center;
+    }
+    .preview-result-label {
+      font-size: .6875rem;
+      text-transform: uppercase;
+      letter-spacing: .05em;
+      color: var(--gold);
+      font-weight: 600;
+    }
+    .preview-result-value {
+      font-family: 'Merriweather', serif;
+      font-size: 1.5rem;
+      font-weight: 900;
+      color: var(--navy);
+    }
+    .preview-badge {
+      background: var(--success);
+      color: white;
+      font-size: .75rem;
+      font-weight: 600;
+      padding: .375rem 1rem;
+      border-radius: 100px;
+      box-shadow: var(--shadow);
+      text-align: center;
+      margin: 1rem 1.5rem 1.5rem;
+      display: inline-block;
+    }
+    .preview-badge-row {
+      text-align: right;
+      padding: 0 1.5rem 1.5rem;
+    }
+    .preview-body { padding: 1.5rem 1.5rem .75rem; }
+    .calc-state-select {
+      width: 100%;
+      padding: .5rem .75rem;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      font-size: .8125rem;
+      font-family: inherit;
+      color: var(--text);
+      background: var(--light-gray);
+      margin-bottom: .75rem;
+      cursor: pointer;
+    }
+    .calc-state-select:focus { outline: none; border-color: var(--navy); }
+    .calc-input {
+      width: 100%;
+      padding: .5rem .75rem;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      font-size: .9375rem;
+      font-weight: 600;
+      font-family: inherit;
+      color: var(--text);
+      background: var(--white);
+    }
+    .calc-input:focus { outline: none; border-color: var(--navy); box-shadow: 0 0 0 3px rgba(30,58,95,.1); }
+    .calc-input::placeholder { color: var(--text-muted); font-weight: 400; }
+    .calc-btn {
+      width: 100%;
+      padding: .75rem;
+      background: var(--gold);
+      color: var(--white);
+      border: none;
+      border-radius: 8px;
+      font-size: .875rem;
+      font-weight: 600;
+      font-family: inherit;
+      cursor: pointer;
+      transition: background .15s;
+      margin-top: .25rem;
+    }
+    .calc-btn:hover { background: var(--gold-light); }
+    .preview-result { transition: all .3s ease; }
+    .preview-result.highlight {
+      background: #ecfdf5;
+      border-color: #86efac;
+    }
+
+    @media (max-width: 900px) {
+      .hero { padding: 3rem 1.5rem 2.5rem; }
+      .hero-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+      .hero-visual { order: -1; }
+      .hero-stats { gap: 1.5rem; }
+    }
+
+    /* ── Social proof bar ── */
+    .proof-bar {
+      background: var(--navy-dark);
+      border-top: 1px solid rgba(255,255,255,.08);
+      padding: 1.25rem 1.5rem;
+    }
+    .proof-bar-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 2.5rem;
+      flex-wrap: wrap;
+    }
+    .proof-item {
+      display: flex;
+      align-items: center;
+      gap: .5rem;
+      color: rgba(255,255,255,.8);
+      font-size: .875rem;
+      font-weight: 500;
+    }
+    .proof-item svg {
+      width: 18px;
+      height: 18px;
+      color: var(--gold);
+      flex-shrink: 0;
+    }
+    .proof-divider {
+      width: 1px;
+      height: 20px;
+      background: rgba(255,255,255,.15);
+    }
+
+    @media (max-width: 600px) {
+      .proof-divider { display: none; }
+      .proof-bar-inner { gap: 1rem; }
+    }
+
+    /* ── Section shared ── */
+    .section {
+      padding: 5rem 1.5rem;
+    }
+    .section-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .section-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    .section-label {
+      display: inline-block;
+      font-size: .75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      color: var(--gold);
+      margin-bottom: .75rem;
+    }
+    .section-title {
+      font-size: clamp(1.5rem, 3vw, 2.25rem);
+      font-weight: 900;
+      color: var(--navy);
+      margin-bottom: .75rem;
+    }
+    .section-subtitle {
+      font-size: 1.0625rem;
+      color: var(--text-muted);
+      max-width: 640px;
+      margin: 0 auto;
+    }
+
+    /* ── What Is SupportCalc ── */
+    .what-is {
+      background: var(--white);
+    }
+    .what-is-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+    .what-is-content h2 {
+      font-size: 1.75rem;
+      color: var(--navy);
+      margin-bottom: 1rem;
+    }
+    .what-is-content p {
+      color: var(--slate);
+      font-size: 1rem;
+      margin-bottom: 1.5rem;
+      line-height: 1.7;
+    }
+    .what-is-features {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: .75rem;
+      margin-bottom: 2rem;
+    }
+    .what-is-features li {
+      display: flex;
+      align-items: flex-start;
+      gap: .75rem;
+      font-size: .9375rem;
+      color: var(--slate);
+    }
+    .what-is-features li svg {
+      width: 20px;
+      height: 20px;
+      color: var(--success);
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .platform-pills {
+      display: flex;
+      gap: .75rem;
+    }
+    .platform-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: .375rem;
+      background: var(--light-gray);
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      padding: .5rem 1rem;
+      font-size: .8125rem;
+      font-weight: 500;
+      color: var(--slate);
+    }
+    .platform-pill svg { width: 16px; height: 16px; }
+
+    .what-is-visual {
+      background: var(--light-gray);
+      border-radius: var(--radius);
+      padding: 2.5rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem;
+    }
+    .feature-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      box-shadow: var(--shadow);
+    }
+    .feature-card-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: .75rem;
+    }
+    .feature-card-icon svg { width: 20px; height: 20px; }
+    .feature-card-icon.blue { background: #dbeafe; color: #2563eb; }
+    .feature-card-icon.amber { background: #fef3c7; color: #d97706; }
+    .feature-card-icon.green { background: #dcfce7; color: #16a34a; }
+    .feature-card-icon.purple { background: #f3e8ff; color: #9333ea; }
+    .feature-card h4 {
+      font-family: 'Inter', sans-serif;
+      font-size: .875rem;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: .25rem;
+    }
+    .feature-card p {
+      font-size: .8125rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    @media (max-width: 900px) {
+      .what-is-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+    }
+    @media (max-width: 500px) {
+      .what-is-visual { grid-template-columns: 1fr; }
+    }
+
+    /* ── Features grid ── */
+    .features { background: var(--light-gray); }
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+    }
+    .feature-block {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 2rem 1.5rem;
+      box-shadow: var(--shadow);
+      text-align: center;
+      transition: transform .15s, box-shadow .15s;
+    }
+    .feature-block:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+    .feature-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1rem;
+    }
+    .feature-icon svg { width: 28px; height: 28px; }
+    .feature-icon.navy { background: var(--navy); color: var(--gold); }
+    .feature-icon.gold { background: var(--gold-bg); color: var(--gold); border: 1px solid #e9d5a8; }
+    .feature-icon.teal { background: #ccfbf1; color: #0d9488; }
+    .feature-icon.indigo { background: #e0e7ff; color: #4f46e5; }
+    .feature-block h3 {
+      font-family: 'Inter', sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: .5rem;
+    }
+    .feature-block p {
+      font-size: .875rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    @media (max-width: 900px) { .features-grid { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 500px) { .features-grid { grid-template-columns: 1fr; } }
+
+    /* ── States ── */
+    .states { background: var(--white); }
+    .states-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 1.25rem;
+    }
+    .state-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.75rem 1.25rem;
+      text-align: center;
+      text-decoration: none;
+      color: var(--text);
+      transition: all .15s;
+      position: relative;
+      overflow: hidden;
+    }
+    .state-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: var(--navy);
+      transform: scaleX(0);
+      transition: transform .2s;
+    }
+    .state-card:hover::before { transform: scaleX(1); }
+    .state-card:hover { border-color: var(--navy); box-shadow: var(--shadow-lg); transform: translateY(-2px); }
+    .state-abbr {
+      font-family: 'Merriweather', serif;
+      font-size: 2rem;
+      font-weight: 900;
+      color: var(--navy);
+      margin-bottom: .25rem;
+    }
+    .state-name {
+      font-size: .875rem;
+      font-weight: 500;
+      color: var(--text);
+      margin-bottom: .375rem;
+    }
+    .state-detail {
+      font-size: .75rem;
+      color: var(--text-muted);
+      line-height: 1.4;
+    }
+    .state-court-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: .25rem;
+      margin-top: .625rem;
+      font-size: .6875rem;
+      font-weight: 600;
+      color: var(--success);
+      background: #f0fdf4;
+      border: 1px solid #bbf7d0;
+      border-radius: 100px;
+      padding: .25rem .625rem;
+    }
+    .state-court-badge svg { width: 12px; height: 12px; }
+
+    @media (max-width: 900px) { .states-grid { grid-template-columns: repeat(3, 1fr); } }
+    @media (max-width: 500px) { .states-grid { grid-template-columns: 1fr 1fr; } }
+
+    /* ── Pricing ── */
+    .pricing { background: var(--light-gray); }
+    .pricing-toggle {
+      display: flex;
+      justify-content: center;
+      gap: 0;
+      margin-bottom: 2.5rem;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      padding: 4px;
+      width: fit-content;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .pricing-toggle-btn {
+      padding: .625rem 1.5rem;
+      border: none;
+      border-radius: 100px;
+      font-size: .875rem;
+      font-weight: 600;
+      cursor: pointer;
+      background: transparent;
+      color: var(--text-muted);
+      transition: all .15s;
+    }
+    .pricing-toggle-btn.active {
+      background: var(--navy);
+      color: var(--white);
+    }
+    .pricing-cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .pricing-card {
+      background: var(--white);
+      border-radius: 16px;
+      padding: 2.5rem 2rem;
+      box-shadow: var(--shadow);
+      position: relative;
+      border: 2px solid transparent;
+      transition: border-color .15s;
+    }
+    .pricing-card.popular {
+      border-color: var(--gold);
+    }
+    .popular-tag {
+      position: absolute;
+      top: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--gold);
+      color: var(--white);
+      font-size: .75rem;
+      font-weight: 600;
+      padding: .25rem 1rem;
+      border-radius: 100px;
+    }
+    .pricing-card h3 {
+      font-family: 'Inter', sans-serif;
+      font-size: 1.125rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: .25rem;
+    }
+    .pricing-card .tier-desc {
+      font-size: .875rem;
+      color: var(--text-muted);
+      margin-bottom: 1.25rem;
+    }
+    .price-row {
+      display: flex;
+      align-items: baseline;
+      gap: .25rem;
+      margin-bottom: .25rem;
+    }
+    .price-amount {
+      font-family: 'Merriweather', serif;
+      font-size: 2.5rem;
+      font-weight: 900;
+      color: var(--navy);
+    }
+    .price-period {
+      font-size: .875rem;
+      color: var(--text-muted);
+    }
+    .price-note {
+      font-size: .8125rem;
+      color: var(--success);
+      font-weight: 500;
+      margin-bottom: 1.5rem;
+    }
+    .pricing-features {
+      list-style: none;
+      margin-bottom: 1.5rem;
+    }
+    .pricing-features li {
+      display: flex;
+      align-items: flex-start;
+      gap: .5rem;
+      padding: .5rem 0;
+      border-bottom: 1px solid var(--light-gray);
+      font-size: .875rem;
+      color: var(--slate);
+    }
+    .pricing-features li:last-child { border-bottom: none; }
+    .pricing-features li svg {
+      width: 16px;
+      height: 16px;
+      color: var(--success);
+      flex-shrink: 0;
+      margin-top: 3px;
+    }
+    .pricing-card .btn { width: 100%; justify-content: center; }
+
+    @media (max-width: 600px) { .pricing-cards { grid-template-columns: 1fr; } }
+
+    /* ── Testimonials ── */
+    .testimonials { background: var(--white); }
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+    .testimonial-card {
+      background: var(--light-gray);
+      border-radius: var(--radius);
+      padding: 2rem;
+    }
+    .testimonial-stars {
+      display: flex;
+      gap: .125rem;
+      margin-bottom: 1rem;
+    }
+    .testimonial-stars svg { width: 16px; height: 16px; color: #f59e0b; }
+    .testimonial-text {
+      font-size: .9375rem;
+      color: var(--slate);
+      line-height: 1.65;
+      margin-bottom: 1.25rem;
+      font-style: italic;
+    }
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: .75rem;
+    }
+    .testimonial-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--navy);
+      color: var(--white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: .8125rem;
+    }
+    .testimonial-name {
+      font-weight: 600;
+      font-size: .875rem;
+      color: var(--text);
+    }
+    .testimonial-role {
+      font-size: .75rem;
+      color: var(--text-muted);
+    }
+
+    @media (max-width: 900px) { .testimonials-grid { grid-template-columns: 1fr; } }
+
+    /* ── CTA banner ── */
+    .cta-banner {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+      padding: 4rem 1.5rem;
+      text-align: center;
+      color: var(--white);
+    }
+    .cta-banner h2 {
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      margin-bottom: .75rem;
+    }
+    .cta-banner p {
+      font-size: 1.0625rem;
+      color: rgba(255,255,255,.8);
+      max-width: 560px;
+      margin: 0 auto 2rem;
+    }
+    .cta-banner .btn-row {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    /* ── Lead capture form ── */
+    .lead-form-section {
+      background: var(--gold-bg);
+      border-top: 1px solid #e9d5a8;
+    }
+    .lead-form-inner {
+      max-width: 640px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .lead-form-inner h2 {
+      font-size: 1.5rem;
+      color: var(--navy);
+      margin-bottom: .5rem;
+    }
+    .lead-form-inner > p {
+      color: var(--text-muted);
+      margin-bottom: 2rem;
+    }
+    .lead-form {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+    .lead-form .full-width { grid-column: 1 / -1; }
+    .form-group { text-align: left; }
+    .form-group label {
+      display: block;
+      font-size: .8125rem;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: .375rem;
+    }
+    .form-group input,
+    .form-group select {
+      width: 100%;
+      padding: .75rem 1rem;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      font-size: .9375rem;
+      font-family: inherit;
+      background: var(--white);
+      color: var(--text);
+      transition: border-color .15s;
+    }
+    .form-group input:focus,
+    .form-group select:focus {
+      outline: none;
+      border-color: var(--navy);
+      box-shadow: 0 0 0 3px rgba(30,58,95,.1);
+    }
+    .lead-form .btn { width: 100%; justify-content: center; font-size: 1rem; padding: 1rem; }
+    .form-fine-print {
+      font-size: .75rem;
+      color: var(--text-muted);
+      margin-top: .75rem;
+    }
+
+    @media (max-width: 500px) { .lead-form { grid-template-columns: 1fr; } }
+
+    /* ── Footer ── */
+    .site-footer {
+      background: var(--navy-dark);
+      color: rgba(255,255,255,.7);
+      padding: 3.5rem 1.5rem 2rem;
+    }
+    .footer-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+    .footer-brand p {
+      font-size: .875rem;
+      line-height: 1.6;
+      margin-top: .75rem;
+      max-width: 280px;
+    }
+    .footer-col h4 {
+      font-family: 'Inter', sans-serif;
+      font-size: .75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      color: rgba(255,255,255,.4);
+      margin-bottom: 1rem;
+    }
+    .footer-col ul { list-style: none; }
+    .footer-col li { margin-bottom: .5rem; }
+    .footer-col a {
+      color: rgba(255,255,255,.7);
+      text-decoration: none;
+      font-size: .875rem;
+      transition: color .15s;
+    }
+    .footer-col a:hover { color: var(--gold-light); }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,.1);
+      padding-top: 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: .75rem;
+      font-size: .8125rem;
+    }
+
+    @media (max-width: 900px) {
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .footer-brand { grid-column: 1 / -1; }
+    }
+    @media (max-width: 500px) {
+      .footer-grid { grid-template-columns: 1fr; }
+    }
+
+    /* ── Scroll to top ── */
+    .scroll-top {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--navy);
+      color: var(--white);
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: var(--shadow-lg);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .2s;
+      z-index: 90;
+    }
+    .scroll-top.visible { opacity: 1; pointer-events: auto; }
+    .scroll-top svg { width: 20px; height: 20px; }
+  </style>
+</head>
+<body>
+
+  <!-- Utility bar -->
+  <div class="utility-bar">
+    <div class="inner">
+      <span>Court-trusted family law software since 1990</span>
+      <div class="utility-contact">
+        <a href="tel:1-800-637-1260">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"/></svg>
+          1-800-637-1260
+        </a>
+        <a href="mailto:info@legalplus.com">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"/></svg>
+          info@legalplus.com
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="site-nav">
+    <div class="nav-inner">
+      <a href="#" class="nav-brand">
+        <div class="logo-mark">L+</div>
+        <div class="nav-brand-text">
+          <span class="nav-brand-name">LegalPlus</span>
+          <span class="nav-brand-sub">FamilySoft SupportCalc</span>
+        </div>
+      </a>
+      <button class="mobile-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/></svg>
+      </button>
+      <ul class="nav-links">
+        <li><a href="#products">Products</a></li>
+        <li><a href="#states">By State</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="https://www.legalplus.com/swift.html">SWIFT</a></li>
+        <li><a href="#contact">Support</a></li>
+        <li><a href="https://legalpluscloud.com" class="nav-cta">
+          Log In
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" width="16" height="16"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v7.5A2.25 2.25 0 0 0 5.25 18h7.5A2.25 2.25 0 0 0 15 15.75V13.5m3-9 3 3m0 0-3 3m3-3H9"/></svg>
+        </a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="dot"></span>
+          Now available in Cloud &amp; Desktop
+        </div>
+        <h1>The Child Support Software <span>Courts Trust</span></h1>
+        <p class="hero-desc">
+          FamilySoft SupportCalc delivers accurate, court-credible child support calculations
+          for family law attorneys. Trusted by courts and practitioners across 5 states for over 36 years.
+        </p>
+        <div class="hero-actions">
+          <a href="#get-started" class="btn btn-gold">
+            Get Started Free
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" width="18" height="18"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg>
+          </a>
+          <a href="#products" class="btn btn-outline">See How It Works</a>
+        </div>
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <div class="hero-stat-num">36+</div>
+            <div class="hero-stat-label">Years in Practice</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-num">5</div>
+            <div class="hero-stat-label">States Covered</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-num">1000s</div>
+            <div class="hero-stat-label">Attorneys Served</div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="product-preview">
+          <div class="preview-topbar">
+            <span class="preview-dot red"></span>
+            <span class="preview-dot yellow"></span>
+            <span class="preview-dot green"></span>
+            <span class="preview-url">legalpluscloud.com/supportcalc</span>
+          </div>
+          <div class="preview-body">
+            <select class="calc-state-select" id="calcState" onchange="updateCalcTitle()">
+              <option value="WA">Washington</option>
+              <option value="CA">California</option>
+              <option value="PA">Pennsylvania</option>
+              <option value="WV">West Virginia</option>
+              <option value="NY">New York</option>
+            </select>
+            <h4 id="calcTitle">Washington Child Support Estimate</h4>
+            <div class="preview-calc">
+              <div class="preview-field">
+                <div class="preview-field-label">Parent A Monthly Income</div>
+                <input type="text" class="calc-input" id="incomeA" placeholder="$6,250" value="6250" inputmode="numeric">
+              </div>
+              <div class="preview-field">
+                <div class="preview-field-label">Parent B Monthly Income</div>
+                <input type="text" class="calc-input" id="incomeB" placeholder="$4,100" value="4100" inputmode="numeric">
+              </div>
+              <div class="preview-field">
+                <div class="preview-field-label">Number of Children</div>
+                <select class="calc-input" id="numChildren">
+                  <option value="1">1</option>
+                  <option value="2" selected>2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
+              </div>
+              <div class="preview-field">
+                <div class="preview-field-label">Parent A Overnights / Year</div>
+                <input type="text" class="calc-input" id="overnights" placeholder="219" value="219" inputmode="numeric">
+              </div>
+            </div>
+            <button class="calc-btn" onclick="calculateSupport()">Calculate Estimate</button>
+            <div class="preview-result" id="calcResult" style="margin-top:.75rem">
+              <div class="preview-result-label">Estimated Support Obligation</div>
+              <div class="preview-result-value" id="calcAmount">$1,247 /mo</div>
+            </div>
+            <div style="font-size:.65rem;color:var(--text-muted);text-align:center;margin-top:.5rem;line-height:1.4">
+              Estimate only. Actual calculations depend on additional factors.<br>Use FamilySoft SupportCalc for court-ready worksheets.
+            </div>
+          </div>
+          <div class="preview-badge-row">
+            <span class="preview-badge">Court-Certified Software</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Social proof bar -->
+  <div class="proof-bar">
+    <div class="proof-bar-inner">
+      <div class="proof-item">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z"/></svg>
+        Court-approved in 5 states
+      </div>
+      <div class="proof-divider"></div>
+      <div class="proof-item">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>
+        36+ years of accuracy
+      </div>
+      <div class="proof-divider"></div>
+      <div class="proof-item">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19.128a9.38 9.38 0 0 0 2.625.372 9.337 9.337 0 0 0 4.121-.952 4.125 4.125 0 0 0-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 0 1 8.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0 1 11.964-3.07M12 6.375a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0Zm8.25 2.25a2.625 2.625 0 1 1-5.25 0 2.625 2.625 0 0 1 5.25 0Z"/></svg>
+        Thousands of attorneys
+      </div>
+      <div class="proof-divider"></div>
+      <div class="proof-item">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18.75a60.07 60.07 0 0 1 15.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 0 1 3 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 0 0-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 0 1-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 0 0 3 15h-.75M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm3 0h.008v.008H18V10.5Zm-12 0h.008v.008H6V10.5Z"/></svg>
+        30-day money-back guarantee
+      </div>
+    </div>
+  </div>
+
+  <!-- What Is SupportCalc -->
+  <section class="section what-is" id="products">
+    <div class="section-inner">
+      <div class="what-is-grid">
+        <div class="what-is-content">
+          <span class="section-label">About the Product</span>
+          <h2>What Is FamilySoft SupportCalc?</h2>
+          <p>
+            FamilySoft SupportCalc is the leading child support calculation software for family law attorneys.
+            It generates accurate, court-ready support worksheets based on each state's specific guidelines,
+            so you can present calculations that judges trust and opposing counsel respects.
+          </p>
+          <ul class="what-is-features">
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg>
+              State-specific calculations reviewed against legislative code every session
+            </li>
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg>
+              Court-certified output accepted by judges across 5 states
+            </li>
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg>
+              183+ family law forms included in the Combination package
+            </li>
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg>
+              PropertyCalc for equitable property division built in
+            </li>
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg>
+              Free updates, free technical support, and free SWIFT included
+            </li>
+          </ul>
+          <div class="platform-pills">
+            <span class="platform-pill">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418"/></svg>
+              Cloud (any browser)
+            </span>
+            <span class="platform-pill">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 17.25v1.007a3 3 0 0 1-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0 1 15 18.257V17.25m6-12V15a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 15V5.25A2.25 2.25 0 0 1 5.25 3h13.5A2.25 2.25 0 0 1 21 5.25Z"/></svg>
+              Desktop (PC &amp; Mac)
+            </span>
+          </div>
+        </div>
+        <div class="what-is-visual">
+          <div class="feature-card">
+            <div class="feature-card-icon blue">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 15.75V18m-7.5-6.75h.008v.008H8.25v-.008Zm0 2.25h.008v.008H8.25V13.5Zm0 2.25h.008v.008H8.25v-.008Zm0 2.25h.008v.008H8.25V18Zm2.498-6.75h.007v.008h-.007v-.008Zm0 2.25h.007v.008h-.007V13.5Zm0 2.25h.007v.008h-.007v-.008Zm0 2.25h.007v.008h-.007V18Zm2.504-6.75h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V13.5Zm0 2.25h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V18Zm2.498-6.75h.008v.008H15.75v-.008Zm0 2.25h.008v.008H15.75V13.5ZM8.25 6h7.5v2.25h-7.5V6Z"/></svg>
+            </div>
+            <h4>SupportCalc</h4>
+            <p>Precise child support calculations by state</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-card-icon amber">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z"/></svg>
+            </div>
+            <h4>FormsPlus</h4>
+            <p>183+ state-specific family law forms</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-card-icon green">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18.75a60.07 60.07 0 0 1 15.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 0 1 3 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 0 0-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 0 1-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 0 0 3 15h-.75M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm3 0h.008v.008H18V10.5Zm-12 0h.008v.008H6V10.5Z"/></svg>
+            </div>
+            <h4>PropertyCalc</h4>
+            <p>Equitable property division analysis</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-card-icon purple">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3v11.25A2.25 2.25 0 0 0 6 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0 1 18 16.5h-2.25m-7.5 0h7.5m-7.5 0-1 3m8.5-3 1 3m0 0 .5 1.5m-.5-1.5h-9.5m0 0-.5 1.5m.75-9 3-3 2.148 2.148A12.061 12.061 0 0 1 16.5 7.605"/></svg>
+            </div>
+            <h4>Law Online</h4>
+            <p>Instant access to relevant statutes</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="section features">
+    <div class="section-inner">
+      <div class="section-header">
+        <span class="section-label">Why Attorneys Choose LegalPlus</span>
+        <h2 class="section-title">Accurate. Credible. Complete.</h2>
+        <p class="section-subtitle">Built and refined over 36 years by attorneys, for attorneys. Every calculation reviewed against current legislative code.</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-block">
+          <div class="feature-icon navy">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 0 1-1.043 3.296 3.745 3.745 0 0 1-3.296 1.043A3.745 3.745 0 0 1 12 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 0 1-3.296-1.043 3.745 3.745 0 0 1-1.043-3.296A3.745 3.745 0 0 1 3 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 0 1 1.043-3.296 3.746 3.746 0 0 1 3.296-1.043A3.746 3.746 0 0 1 12 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 0 1 3.296 1.043 3.746 3.746 0 0 1 1.043 3.296A3.745 3.745 0 0 1 21 12Z"/></svg>
+          </div>
+          <h3>Accurate</h3>
+          <p>Every calculation is reviewed against current state legislative code. Results you can stand behind in court.</p>
+        </div>
+        <div class="feature-block">
+          <div class="feature-icon gold">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0 0 12 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18M12 6.75h.008v.008H12V6.75Z"/></svg>
+          </div>
+          <h3>Court-Credible</h3>
+          <p>Courts in WA, PA, and WV use the same software. When the judge uses SupportCalc, your numbers speak the same language.</p>
+        </div>
+        <div class="feature-block">
+          <div class="feature-icon teal">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 6.75V15m6-6v8.25m.503 3.498 4.875-2.437c.381-.19.622-.58.622-1.006V4.82c0-.836-.88-1.38-1.628-1.006l-3.869 1.934c-.317.159-.69.159-1.006 0L9.503 3.252a1.125 1.125 0 0 0-1.006 0L3.622 5.689C3.24 5.88 3 6.27 3 6.695V19.18c0 .836.88 1.38 1.628 1.006l3.869-1.934c.317-.159.69-.159 1.006 0l4.994 2.497c.317.158.69.158 1.006 0Z"/></svg>
+          </div>
+          <h3>State-Specific</h3>
+          <p>Custom-built for CA, WA, PA, WV, and NY. Each state's guidelines, forms, and statutes are fully implemented.</p>
+        </div>
+        <div class="feature-block">
+          <div class="feature-icon indigo">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M6.429 9.75 2.25 12l4.179 2.25m0-4.5 5.571 3 5.571-3m-11.142 0L2.25 7.5 12 2.25l9.75 5.25-4.179 2.25m0 0L21.75 12l-4.179 2.25m0 0 4.179 2.25L12 21.75 2.25 16.5l4.179-2.25m11.142 0-5.571 3-5.571-3"/></svg>
+          </div>
+          <h3>Complete Suite</h3>
+          <p>SupportCalc, FormsPlus, PropertyCalc, and SWIFT together. Everything you need in one subscription.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- States -->
+  <section class="section states" id="states">
+    <div class="section-inner">
+      <div class="section-header">
+        <span class="section-label">Coverage</span>
+        <h2 class="section-title">Select Your State</h2>
+        <p class="section-subtitle">State-specific calculations, forms, and guidelines built for the courts in your jurisdiction.</p>
+      </div>
+      <div class="states-grid">
+        <a href="#get-started" class="state-card">
+          <div class="state-abbr">CA</div>
+          <div class="state-name">California</div>
+          <div class="state-detail">Judicial Council certified</div>
+          <div class="state-court-badge">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg>
+            Court Certified
+          </div>
+        </a>
+        <a href="#get-started" class="state-card">
+          <div class="state-abbr">WA</div>
+          <div class="state-name">Washington</div>
+          <div class="state-detail">36+ year market leader</div>
+          <div class="state-court-badge">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg>
+            Court Adopted
+          </div>
+        </a>
+        <a href="#get-started" class="state-card">
+          <div class="state-abbr">PA</div>
+          <div class="state-name">Pennsylvania</div>
+          <div class="state-detail">22+ years court adoption</div>
+          <div class="state-court-badge">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg>
+            Court Adopted
+          </div>
+        </a>
+        <a href="#get-started" class="state-card">
+          <div class="state-abbr">WV</div>
+          <div class="state-name">West Virginia</div>
+          <div class="state-detail">22+ years court adoption</div>
+          <div class="state-court-badge">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg>
+            Court Adopted
+          </div>
+        </a>
+        <a href="#get-started" class="state-card">
+          <div class="state-abbr">NY</div>
+          <div class="state-name">New York</div>
+          <div class="state-detail">24+ year presence</div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section class="section pricing" id="pricing">
+    <div class="section-inner">
+      <div class="section-header">
+        <span class="section-label">Simple Pricing</span>
+        <h2 class="section-title">Transparent Plans, No Surprises</h2>
+        <p class="section-subtitle">No setup fees. No minimum commitment. Cancel anytime. 30-day money-back guarantee.</p>
+      </div>
+      <div class="pricing-toggle">
+        <button class="pricing-toggle-btn active" onclick="togglePlatform(this)">Cloud</button>
+        <button class="pricing-toggle-btn" onclick="togglePlatform(this)">Desktop (PC/Mac)</button>
+      </div>
+      <div class="pricing-cards">
+        <div class="pricing-card">
+          <h3>SupportCalc</h3>
+          <p class="tier-desc">Child support calculations only</p>
+          <div class="price-row">
+            <span class="price-amount">$45</span>
+            <span class="price-period">/month</span>
+          </div>
+          <p class="price-note">No setup fee &middot; No contract</p>
+          <ul class="pricing-features">
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg>
+              Court-certified child support worksheets
+            </li>
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg>
+              State-specific guideline calculations
+            </li>
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg>
+              Free SWIFT updates included
+            </li>
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg>
+              Free technical support
+            </li>
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg>
+              30-day money-back guarantee
+            </li>
+          </ul>
+          <a href="#get-started" class="btn btn-navy">Subscribe Now</a>
+        </div>
+        <div class="pricing-card popular">
+          <div class="popular-tag">Most Popular</div>
+          <h3>Combination</h3>
+          <p class="tier-desc">Full family law suite</p>
+          <div class="price-row">
+            <span class="price-amount">$69.95</span>
+            <span class="price-period">/month</span>
+          </div>
+          <p class="price-note">Best value &middot; Everything included</p>
+          <ul class="pricing-features">
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg>
+              Everything in SupportCalc
+            </li>
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg>
+              FormsPlus: 183+ family law forms
+            </li>
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg>
+              PropertyCalc: property division tools
+            </li>
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg>
+              Law Online: instant statute access
+            </li>
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg>
+              Full document automation
+            </li>
+          </ul>
+          <a href="#get-started" class="btn btn-gold">Subscribe Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="section testimonials" id="testimonials">
+    <div class="section-inner">
+      <div class="section-header">
+        <span class="section-label">Trusted by Attorneys</span>
+        <h2 class="section-title">What Attorneys Say</h2>
+        <p class="section-subtitle">Family law professionals across 5 states rely on SupportCalc every day.</p>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="testimonial-stars">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"/></svg>
+          </div>
+          <p class="testimonial-text">"SupportCalc is the backbone of my family law practice. The calculations are always accurate, and the fact that courts use the same software gives my clients confidence."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">JM</div>
+            <div>
+              <div class="testimonial-name">Jennifer M., Esq.</div>
+              <div class="testimonial-role">Family Law Attorney &middot; Seattle, WA</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"/></svg>
+          </div>
+          <p class="testimonial-text">"I switched to the Combination package and it transformed how I handle cases. The forms, calculations, and property tools all in one place saves me hours every week."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">RK</div>
+            <div>
+              <div class="testimonial-name">Robert K., Esq.</div>
+              <div class="testimonial-role">Family Law Attorney &middot; Philadelphia, PA</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"/></svg>
+          </div>
+          <p class="testimonial-text">"Having cloud access means I can run calculations from the courthouse on my phone. The desktop app is perfect for my office. Best of both worlds."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">SP</div>
+            <div>
+              <div class="testimonial-name">Sarah P., Esq.</div>
+              <div class="testimonial-role">Family Law Attorney &middot; Los Angeles, CA</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <section class="cta-banner">
+    <h2>Ready to Streamline Your Family Law Practice?</h2>
+    <p>Join thousands of attorneys who trust SupportCalc for accurate, court-credible child support calculations.</p>
+    <div class="btn-row">
+      <a href="#get-started" class="btn btn-gold">
+        Get Started Today
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" width="18" height="18"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg>
+      </a>
+      <a href="tel:1-800-637-1260" class="btn btn-outline">Call 1-800-637-1260</a>
+    </div>
+  </section>
+
+  <!-- Lead capture form -->
+  <section class="section lead-form-section" id="get-started">
+    <div class="section-inner">
+      <div class="lead-form-inner">
+        <span class="section-label">Get Started</span>
+        <h2>Start Using SupportCalc Today</h2>
+        <p>Fill out the form below and we'll get you set up. No setup fees, no minimum commitment.</p>
+        <form class="lead-form" onsubmit="handleFormSubmit(event)">
+          <div class="form-group">
+            <label for="firstName">First Name</label>
+            <input type="text" id="firstName" name="firstName" required placeholder="Jane">
+          </div>
+          <div class="form-group">
+            <label for="lastName">Last Name</label>
+            <input type="text" id="lastName" name="lastName" required placeholder="Smith">
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required placeholder="jane@lawfirm.com">
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone (optional)</label>
+            <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567">
+          </div>
+          <div class="form-group">
+            <label for="firm">Firm Name</label>
+            <input type="text" id="firm" name="firm" placeholder="Smith Family Law, PLLC">
+          </div>
+          <div class="form-group">
+            <label for="state">State</label>
+            <select id="state" name="state" required>
+              <option value="">Select your state</option>
+              <option value="CA">California</option>
+              <option value="WA">Washington</option>
+              <option value="PA">Pennsylvania</option>
+              <option value="WV">West Virginia</option>
+              <option value="NY">New York</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="product">Product</label>
+            <select id="product" name="product" required>
+              <option value="">Select a product</option>
+              <option value="supportcalc">SupportCalc ($45/mo)</option>
+              <option value="combination">Combination ($69.95/mo)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="platform">Platform</label>
+            <select id="platform" name="platform" required>
+              <option value="">Select platform</option>
+              <option value="cloud">Cloud (any browser, any device)</option>
+              <option value="desktop">Desktop (PC or Mac download)</option>
+            </select>
+          </div>
+          <div class="full-width">
+            <button type="submit" class="btn btn-gold">Subscribe Now</button>
+            <p class="form-fine-print">30-day money-back guarantee. Free updates and technical support included. Cancel anytime.</p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer" id="contact">
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div style="display:flex;align-items:center;gap:.75rem;margin-bottom:.25rem">
+            <div style="width:36px;height:36px;background:rgba(255,255,255,.1);border-radius:8px;display:flex;align-items:center;justify-content:center;color:var(--gold);font-weight:900;font-family:Merriweather,serif;font-size:1rem">L+</div>
+            <span style="font-family:Merriweather,serif;font-weight:900;font-size:1.125rem;color:white">LegalPlus</span>
+          </div>
+          <p>Legal+Plus Software Group, Inc.<br>Newcastle, WA</p>
+          <p style="margin-top:.75rem">
+            <a href="tel:1-800-637-1260" style="color:var(--gold-light);text-decoration:none">1-800-637-1260</a><br>
+            <a href="mailto:info@legalplus.com" style="color:rgba(255,255,255,.7);text-decoration:none">info@legalplus.com</a>
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Products</h4>
+          <ul>
+            <li><a href="#products">SupportCalc</a></li>
+            <li><a href="#products">FormsPlus</a></li>
+            <li><a href="#products">PropertyCalc</a></li>
+            <li><a href="#products">Law Online</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>By State</h4>
+          <ul>
+            <li><a href="#states">California</a></li>
+            <li><a href="#states">Washington</a></li>
+            <li><a href="#states">Pennsylvania</a></li>
+            <li><a href="#states">West Virginia</a></li>
+            <li><a href="#states">New York</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="https://www.legalplus.com/swift.html">SWIFT</a></li>
+            <li><a href="https://www.legalplus.com/support.html">Support</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="https://legalpluscloud.com">Login</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Legal+Plus Software Group, Inc. All rights reserved.</span>
+        <span>FamilySoft SupportCalc &middot; 36+ years of court-trusted software</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll to top -->
+  <button class="scroll-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Scroll to top">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5"/></svg>
+  </button>
+
+  <script>
+    // Platform toggle
+    // ── Live Calculator ──
+    // Simplified child support estimation based on WA Schedule.
+    // Uses basic income shares model: combined income → base obligation → proportional split,
+    // with a residential credit when Parent A has >25% overnights.
+    // Other states use the same model shape with adjusted multipliers.
+
+    const stateNames = { WA:'Washington', CA:'California', PA:'Pennsylvania', WV:'West Virginia', NY:'New York' };
+
+    // Base obligation per child as % of combined income (simplified from WA schedule)
+    // These are rough mid-range estimates — real SupportCalc uses full statutory tables.
+    const baseRates = {
+      WA: [0, .20, .30, .37, .42, .46],
+      CA: [0, .22, .32, .39, .44, .48],
+      PA: [0, .18, .28, .35, .40, .44],
+      WV: [0, .19, .29, .36, .41, .45],
+      NY: [0, .17, .25, .29, .31, .35],
+    };
+
+    function parseNum(id) {
+      return Math.max(0, parseInt(String(document.getElementById(id).value).replace(/[^0-9]/g,'')) || 0);
+    }
+
+    function updateCalcTitle() {
+      const st = document.getElementById('calcState').value;
+      document.getElementById('calcTitle').textContent = stateNames[st] + ' Child Support Estimate';
+    }
+
+    function calculateSupport() {
+      const state = document.getElementById('calcState').value;
+      const incA = parseNum('incomeA');
+      const incB = parseNum('incomeB');
+      const kids = parseInt(document.getElementById('numChildren').value);
+      const overnights = Math.min(365, parseNum('overnights'));
+      const combined = incA + incB;
+
+      if (combined === 0) {
+        document.getElementById('calcAmount').textContent = '$0 /mo';
+        return;
+      }
+
+      const rate = baseRates[state][kids] || baseRates[state][5];
+      let obligation = combined * rate;
+
+      // Parent A's proportional share
+      const shareA = incA / combined;
+      let supportOwed = obligation * shareA;
+
+      // Residential credit: reduce obligation if Parent A has significant time (WA-style)
+      const pctTime = overnights / 365;
+      if (pctTime > 0.25) {
+        const credit = obligation * pctTime * 0.75;
+        supportOwed = Math.max(0, supportOwed - credit);
+      }
+
+      supportOwed = Math.round(supportOwed);
+
+      const result = document.getElementById('calcResult');
+      document.getElementById('calcAmount').textContent = '$' + supportOwed.toLocaleString() + ' /mo';
+      result.classList.add('highlight');
+      setTimeout(() => result.classList.remove('highlight'), 600);
+    }
+
+    // Run initial calculation on load
+    calculateSupport();
+
+    // Auto-recalculate on input changes
+    ['incomeA','incomeB','numChildren','overnights','calcState'].forEach(id => {
+      const el = document.getElementById(id);
+      el.addEventListener('input', calculateSupport);
+      el.addEventListener('change', calculateSupport);
+    });
+
+    function togglePlatform(btn) {
+      document.querySelectorAll('.pricing-toggle-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+    }
+
+    // Scroll to top visibility
+    window.addEventListener('scroll', () => {
+      document.querySelector('.scroll-top').classList.toggle('visible', window.scrollY > 600);
+    });
+
+    // Mobile nav close on link click
+    document.querySelectorAll('.nav-links a').forEach(a => {
+      a.addEventListener('click', () => {
+        document.querySelector('.nav-links').classList.remove('open');
+      });
+    });
+
+    // Form submission
+    function handleFormSubmit(e) {
+      e.preventDefault();
+      const form = e.target;
+      const data = new FormData(form);
+      const btn = form.querySelector('button[type="submit"]');
+      btn.textContent = 'Submitting...';
+      btn.disabled = true;
+
+      // Simulate submission — replace with actual endpoint
+      setTimeout(() => {
+        btn.textContent = 'Request Received!';
+        btn.style.background = '#16a34a';
+        setTimeout(() => {
+          btn.textContent = 'Subscribe Now';
+          btn.style.background = '';
+          btn.disabled = false;
+          form.reset();
+        }, 3000);
+      }, 1000);
+    }
+  </script>
+</body>
+</html>
