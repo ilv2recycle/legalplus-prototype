@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<style>
+  @page { size: Letter; margin: 0; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body { font-family: "Segoe UI", Arial, Helvetica, sans-serif; color:#1E293B; font-size: 10pt; line-height: 1.4; }
+  .fs-name, .title { font-family: Georgia, "Times New Roman", serif; }
+
+  .page { width: 8.5in; height: 11in; position: relative; display:flex; flex-direction:column; }
+
+  /* Masthead */
+  .masthead { background: linear-gradient(135deg,#152C4A 0%,#1E3A5F 62%,#2A4F7A 100%); color:#fff; padding: 22px 0.65in 20px; position:relative; overflow:hidden; }
+  .masthead::after { content:""; position:absolute; top:-60%; right:-6%; width:320px; height:320px; background: radial-gradient(circle, rgba(128,190,55,.22) 0%, rgba(128,190,55,0) 70%); }
+  .mast-top { display:flex; justify-content:space-between; align-items:flex-start; position:relative; z-index:1; margin-bottom:16px; }
+  .fs-logo { line-height:1; }
+  .fs-name { font-size: 17pt; font-weight:bold; color:#fff; }
+  .fs-accent { height:2.5px; background:#80BE37; width:96px; margin:4px 0 3px; }
+  .fs-sub { font-size: 6.8pt; color:#DCE7CF; letter-spacing:1.6px; text-transform:uppercase; }
+  .eyebrow { font-size: 7.4pt; font-weight:bold; color:#A9D66B; text-transform:uppercase; letter-spacing:2px; border:1px solid rgba(128,190,55,.55); border-radius:100px; padding:4px 11px; }
+  .title { font-size: 22pt; font-weight:bold; line-height:1.1; position:relative; z-index:1; margin-bottom:5px; }
+  .title .g { color:#A9D66B; }
+  .subtitle { font-size: 10.5pt; color: rgba(255,255,255,.85); font-style: italic; position:relative; z-index:1; }
+
+  /* Content */
+  .content { padding: 15px 0.65in 0; flex:1; }
+  .intro { color:#334155; margin-bottom: 12px; }
+  .ph { color:#9AA7B8; font-style: italic; }
+
+  .grid { display:grid; grid-template-columns: 1fr 1fr; gap: 11px; }
+  .card { background:#F8FAFC; border:1px solid #E7ECF2; border-top:3px solid #80BE37; border-radius:9px; padding: 11px 13px 10px; }
+  .card h2 { font-size: 11pt; color:#1E3A5F; display:flex; align-items:center; gap:8px; margin-bottom:6px; }
+  .num { width:22px; height:22px; background:#1E3A5F; color:#80BE37; border-radius:6px; display:inline-flex; align-items:center; justify-content:center; font-family:Georgia,serif; font-weight:bold; font-size:10.5pt; flex-shrink:0; }
+  .card ul { list-style:none; }
+  .card li { position:relative; padding-left:15px; margin-bottom:4px; font-size:9pt; color:#5A6B7E; line-height:1.34; }
+  .card li::before { content:"\2713"; position:absolute; left:0; top:0; color:#6BA62E; font-weight:bold; }
+  .card.warn { border-top-color:#B45309; }
+  .card.warn .num { background:#7C2D12; color:#FBBF24; }
+  .card.warn li::before { content:"\2715"; color:#B45309; }
+
+  /* Practice tip */
+  .tip { background:#F3F8EC; border:1px solid #CFE6AE; border-radius:9px; padding:11px 14px; margin-top:12px; display:flex; gap:12px; align-items:flex-start; }
+  .tip .seal { width:34px; height:34px; border-radius:50%; background:#80BE37; color:#fff; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+  .tip .seal svg { width:20px; height:20px; }
+  .tip-label { font-size:7.5pt; font-weight:bold; color:#5C8A24; text-transform:uppercase; letter-spacing:1.3px; margin-bottom:2px; }
+  .tip p { font-size:9.4pt; color:#5A6B7E; }
+
+  /* Footer */
+  .footer { margin-top:auto; }
+  .cta { background: linear-gradient(135deg,#152C4A,#1E3A5F); color:#fff; padding: 13px 0.65in; display:flex; justify-content:space-between; align-items:center; gap:16px; }
+  .cta .l .big { font-size:13pt; font-weight:bold; }
+  .cta .l .sm { font-size:8.8pt; color:rgba(255,255,255,.82); margin-top:3px; }
+  .cta .r { text-align:right; flex-shrink:0; }
+  .cta .r .lbl { font-size:7.5pt; color:rgba(255,255,255,.7); text-transform:uppercase; letter-spacing:1.5px; }
+  .cta .r .code { display:inline-block; background:#80BE37; color:#fff; font-weight:bold; font-size:14pt; letter-spacing:2px; padding:4px 15px; border-radius:6px; margin-top:3px; }
+  .cta .r .url { font-size:8.8pt; color:#A9D66B; margin-top:5px; }
+  .disclaimer { background:#111F36; color:#8CA0B8; font-size:7pt; padding:6px 0.65in; display:flex; align-items:center; justify-content:space-between; gap:12px; }
+  .disclaimer img { height:20px; opacity:.9; }
+</style>
+</head>
+<body>
+  <div class="page">
+
+    <div class="masthead">
+      <div class="mast-top">
+        <div class="fs-logo">
+          <div class="fs-name">FamilySoft</div>
+          <div class="fs-accent"></div>
+          <div class="fs-sub">SupportCalc &middot; FormPAK &middot; Washington Edition</div>
+        </div>
+        <div class="eyebrow">Quick-Start Orientation</div>
+      </div>
+      <div class="title">Navigating Changes in <span class="g">Washington Child Support</span></div>
+      <div class="subtitle">A quick-start orientation for newly admitted Washington attorneys</div>
+    </div>
+
+    <div class="content">
+      <p class="intro"><span class="ph">[Intro &mdash; 2&ndash;3 sentences: why staying current on WA child-support rules matters for a new attorney's first cases, and what this one-pager orients them to. Confident, plain-English tone.]</span></p>
+
+      <div class="grid">
+        <div class="card">
+          <h2><span class="num">1</span> What&rsquo;s changed recently</h2>
+          <ul>
+            <li><span class="ph">[Most recent WA schedule / economic-table update &mdash; effective date + headline change.]</span></li>
+            <li><span class="ph">[Recent statutory or form revisions to know (e.g., RCW 26.19, worksheet changes).]</span></li>
+            <li><span class="ph">[What it means for a first-year case.]</span></li>
+          </ul>
+        </div>
+        <div class="card">
+          <h2><span class="num">2</span> Forms you&rsquo;ll actually use</h2>
+          <ul>
+            <li><span class="ph">[Core WA child-support worksheets + the domestic-relations forms most first cases need.]</span></li>
+            <li><span class="ph">[Where the official current versions live, and how often they change.]</span></li>
+          </ul>
+        </div>
+        <div class="card warn">
+          <h2><span class="num">3</span> First-case mistakes to avoid</h2>
+          <ul>
+            <li><span class="ph">[Mistake #1 &mdash; e.g., an outdated worksheet or economic table.]</span></li>
+            <li><span class="ph">[Mistake #2 &mdash; e.g., inconsistent figures across connected documents.]</span></li>
+            <li><span class="ph">[Mistake #3 &mdash; e.g., a formatting issue that gets filings rejected.]</span></li>
+          </ul>
+        </div>
+        <div class="card">
+          <h2><span class="num">4</span> How to stay current</h2>
+          <ul>
+            <li><span class="ph">[Where to check for the latest WA schedule &amp; forms.]</span></li>
+            <li><span class="ph">[How FamilySoft keeps these current for you automatically.]</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="tip">
+        <div class="seal">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"/></svg>
+        </div>
+        <div>
+          <div class="tip-label">Practice Tip</div>
+          <p class="ph">[One concrete, high-value tip from Steven &mdash; the kind of thing a seasoned WA family-law attorney wishes someone had told them in year one.]</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="cta">
+        <div class="l">
+          <div class="big">Ready to get set up?</div>
+          <div class="sm">$10/mo for your first 3 months &middot; full access + a complimentary 1:1 setup session</div>
+        </div>
+        <div class="r">
+          <div class="lbl">Use code</div>
+          <div class="code">NEWBAR</div>
+          <div class="url">legalplus.com/newbar</div>
+        </div>
+      </div>
+      <div class="disclaimer">
+        <span>This orientation is general information for newly admitted Washington attorneys and is not legal advice. &copy; Legal+Plus Software Group, Inc. [1988&ndash;2026]</span>
+        <img src="https://www.legalpluscloud.com/LPCloud.Account/images/LegalplusLogoWhite.png" alt="Legal+Plus">
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<style>
+  @page { size: Letter; margin: 0; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body { font-family: "Segoe UI", Arial, Helvetica, sans-serif; color:#1E293B; font-size: 10.3pt; line-height: 1.44; }
+
+  .page { width: 8.5in; height: 11in; position: relative; display:flex; flex-direction:column; }
+
+  /* Masthead */
+  .masthead { background: linear-gradient(135deg,#152C4A 0%,#1E3A5F 60%,#2A4F7A 100%); color:#fff; padding: 24px 0.7in 22px; position:relative; overflow:hidden; }
+  .masthead::after { content:""; position:absolute; top:-70%; right:-6%; width:300px; height:300px; background: radial-gradient(circle, rgba(128,190,55,.22) 0%, rgba(128,190,55,0) 70%); }
+  .mast-top { display:flex; justify-content:space-between; align-items:flex-start; position:relative; z-index:1; }
+  .brandmark { display:flex; align-items:center; gap:14px; }
+  .fs-logo { display:flex; flex-direction:column; line-height:1; }
+  .fs-name { font-family: Georgia,"Times New Roman",serif; font-size: 27pt; font-weight:bold; color:#fff; letter-spacing:.3px; }
+  .fs-accent { height:3px; background:#80BE37; width:150px; margin:5px 0 4px; }
+  .fs-sub { font-size: 8pt; color:#DCE7CF; letter-spacing:2px; text-transform:uppercase; }
+  .mast-eyebrow { font-size: 7.6pt; font-weight:bold; color:#A9D66B; text-transform:uppercase; letter-spacing:2px; border:1px solid rgba(128,190,55,.55); border-radius:100px; padding:5px 12px; position:relative; z-index:1; white-space:nowrap; }
+  .mast-tag { font-size: 8.4pt; color:rgba(255,255,255,.72); letter-spacing:1px; margin-top:14px; position:relative; z-index:1; }
+
+  /* Body */
+  .content { padding: 20px 0.7in 0; flex:1; }
+  .content p { margin-bottom: 8.5px; }
+  .greeting { font-size: 11pt; }
+  ul { list-style:none; margin: 2px 0 9px; }
+  li { position:relative; padding-left: 20px; margin-bottom: 3.5px; color:#334155; }
+  li::before { content:"\2713"; position:absolute; left:0; color:#6BA62E; font-weight:bold; }
+
+  /* Offer callout */
+  .offer { background:#F3F8EC; border:1.5px solid #CFE6AE; border-left:5px solid #80BE37; border-radius:9px; padding: 12px 18px; margin: 4px 0 11px; display:flex; align-items:center; justify-content:space-between; gap:16px; }
+  .offer .lbl { font-size:7.4pt; font-weight:bold; color:#5C8A24; text-transform:uppercase; letter-spacing:1.4px; }
+  .offer .amt { font-family:Georgia,serif; font-size:20pt; font-weight:bold; color:#1E3A5F; line-height:1.1; }
+  .offer .amt span { font-family:"Segoe UI",Arial,sans-serif; font-size:10pt; font-weight:normal; color:#475569; }
+  .offer .desc { font-size:9pt; color:#475569; margin-top:1px; }
+  .offer .cta { text-align:center; flex-shrink:0; }
+  .offer .cta .use { font-size:7.2pt; color:#5C8A24; text-transform:uppercase; letter-spacing:1.2px; margin-bottom:3px; }
+  .offer .cta .code { display:inline-block; background:#80BE37; color:#fff; font-size:14pt; font-weight:bold; letter-spacing:2px; padding:4px 15px; border-radius:6px; }
+  .offer .cta .url { font-size:8.6pt; color:#2D6A9F; font-weight:600; margin-top:5px; }
+
+  .tagline { font-weight:bold; color:#1E3A5F; font-size:11pt; margin: 4px 0 9px; }
+
+  /* Signature */
+  .sig { margin-top: 12px; }
+  .sig-name { font-size: 12pt; font-weight:bold; color:#1E3A5F; }
+  .sig-title { font-size: 9.6pt; color:#475569; }
+  .sig-contact { font-size: 9.4pt; color:#64748B; margin-top:2px; }
+
+  /* Footer band */
+  .footer { margin-top:auto; }
+  .foot-cta { background: linear-gradient(135deg,#152C4A,#1E3A5F); color:rgba(255,255,255,.92); padding: 12px 0.7in; display:flex; align-items:center; justify-content:space-between; gap:14px; }
+  .foot-cta .txt { font-size:10.5pt; }
+  .foot-cta .txt b { color:#A9D66B; letter-spacing:.5px; }
+  .foot-cta img { height:26px; opacity:.95; }
+  .foot-copy { background:#111F36; color:#8CA0B8; font-size:7pt; text-align:center; padding:6px 0.7in; }
+  .draftnote { background:#0E1A2E; color:#6E829B; font-size:6.6pt; font-style:italic; text-align:center; padding:5px 0.7in; }
+</style>
+</head>
+<body>
+  <div class="page">
+
+    <div class="masthead">
+      <div class="mast-top">
+        <div class="brandmark">
+          <div class="fs-logo">
+            <div class="fs-name">FamilySoft</div>
+            <div class="fs-accent"></div>
+            <div class="fs-sub">SupportCalc &middot; FormPAK &middot; Washington Edition</div>
+          </div>
+        </div>
+        <div class="mast-eyebrow">A note for new WA attorneys</div>
+      </div>
+      <div class="mast-tag">Washington family law software &middot; since 1988</div>
+    </div>
+
+    <div class="content">
+      <p class="greeting">Dear Counselor,</p>
+      <p>Congratulations on passing the Bar and joining the legal profession as an attorney in Washington! Your first family law cases are where your reputation takes shape, and the right tools help you walk in prepared and confident from day one.</p>
+      <p>That&rsquo;s where <strong>LegalPlus</strong> comes in. The Washington-specific software for family law cases, the family law documents that firms and courts across the state have trusted since 1988. It&rsquo;s built to help you:</p>
+      <ul>
+        <li>Produce current and accurate, Washington-compliant child-support calculations</li>
+        <li>Prepare and update domestic relations forms in minutes, not hours</li>
+        <li>Keep every name, date, and figure consistent across a full set of documents</li>
+        <li>&hellip;and much more</li>
+      </ul>
+      <p>Because family law offices, courts and commissioners, and the Office of Administrative Hearings across Washington rely on FamilySoft, you&rsquo;ll walk into court working from the same trusted forms and numbers used throughout the state.</p>
+      <p>To help you start strong, newly admitted Washington attorneys get an introductory rate of just <strong>$10 per month for your first three months</strong> for full access plus a complimentary one-on-one setup session, so you&rsquo;re productive from day one. After that, your membership continues at $45 per month.</p>
+
+      <div class="offer">
+        <div class="txt">
+          <div class="lbl">Your new-attorney offer</div>
+          <div class="amt">$10/mo <span>for your first 3 months</span></div>
+          <div class="desc">Full software access + a complimentary 1:1 online setup session</div>
+        </div>
+        <div class="cta">
+          <div class="use">Use code</div>
+          <div class="code">NEWBAR</div>
+          <div class="url">legalplus.com/newbar</div>
+        </div>
+      </div>
+
+      <p class="tagline">All you need are the clients, we&rsquo;ll help with the rest.</p>
+      <p>Not ready to sign up yet? The same page has a free guide, &ldquo;Navigating Changes in Washington Child Support,&rdquo; plus an easy way to ask us anything first.</p>
+      <p>Welcome to practice. We look forward to supporting your success.</p>
+
+      <div class="sig">
+        <p style="margin-bottom:6px;">Yours truly,</p>
+        <div class="sig-name">Stephen Sooter, Esq.</div>
+        <div class="sig-title">President, Legal+Plus Software Group, Inc.</div>
+        <div class="sig-contact">1-800-637-1260 &nbsp;&middot;&nbsp; info@legalplus.com</div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="foot-cta">
+        <div class="txt">Get set up today at <b>legalplus.com/newbar</b> &nbsp;&middot;&nbsp; code <b>NEWBAR</b></div>
+        <img src="https://www.legalpluscloud.com/LPCloud.Account/images/LegalplusLogoWhite.png" alt="Legal+Plus">
+      </div>
+      <div class="foot-copy">&copy; Copyright by Legal+Plus Software Group, Inc. [1988&ndash;2026] &middot; Unauthorized use or copying of this product is prohibited.</div>
+    </div>
+
+  </div>
+</body>
+</html>
