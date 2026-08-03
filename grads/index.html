@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>FamilySoft for New Washington Attorneys | Family Law Document &amp; Child-Support Software</title>
-  <meta name="description" content="Newly admitted to the Washington bar? Get set up with FamilySoft &mdash; the Washington-specific family law document and child-support software courts and firms across the state have relied on since 1988. $10/mo for your first 3 months with code NEWBAR, setup session included.">
+  <meta name="description" content="Newly admitted to the Washington bar? Get set up with FamilySoft &mdash; the Washington-specific family law document and child-support software courts and firms across the state have relied on since 1988. $10/mo for your first 3 months, setup session included.">
   <meta property="og:title" content="FamilySoft for New Washington Attorneys &mdash; Confidence from your first case">
-  <meta property="og:description" content="Washington-specific family law document and child-support software. $10/mo for your first 3 months with a complimentary 1:1 setup session. Code NEWBAR.">
+  <meta property="og:description" content="Washington-specific family law document and child-support software. $10/mo for your first 3 months with a complimentary 1:1 setup session.">
   <meta property="og:type" content="website">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,7 +20,7 @@
       --navy-light: #2a4f7a;
       --gold: #80BE37;
       --gold-light: #9BD154;
-      --gold-bg: #f3f8ec;
+      --gold-bg: #eef2f7;
       --slate: #475569;
       --light-gray: #f8fafc;
       --border: #e2e8f0;
@@ -148,14 +148,14 @@
       display: inline-flex;
       align-items: center;
       gap: .375rem;
-      background: var(--gold);
+      background: var(--navy);
       color: var(--white) !important;
       padding: .625rem 1.25rem !important;
       border-radius: 8px !important;
       font-weight: 600 !important;
       transition: background .15s, transform .1s !important;
     }
-    .nav-cta:hover { background: var(--gold-light) !important; transform: translateY(-1px); }
+    .nav-cta:hover { background: var(--navy-dark) !important; transform: translateY(-1px); }
 
     /* Mobile menu */
     .mobile-toggle {
@@ -236,7 +236,7 @@
       line-height: 1.15;
       margin-bottom: 1.25rem;
     }
-    .hero h1 span { color: var(--gold-light); }
+    .hero h1 span { color: #fff; }
     .hero-desc {
       font-size: 1.125rem;
       line-height: 1.7;
@@ -264,10 +264,10 @@
       transition: all .15s;
     }
     .btn-gold {
-      background: var(--gold);
+      background: var(--navy);
       color: var(--white);
     }
-    .btn-gold:hover { background: var(--gold-light); transform: translateY(-1px); box-shadow: 0 4px 16px rgba(128,190,55,.35); }
+    .btn-gold:hover { background: var(--navy-dark); transform: translateY(-1px); box-shadow: 0 4px 16px rgba(30,58,95,.35); }
     .btn-outline {
       background: transparent;
       color: var(--white);
@@ -673,7 +673,7 @@
     }
     .feature-icon svg { width: 28px; height: 28px; }
     .feature-icon.navy { background: var(--navy); color: var(--gold); }
-    .feature-icon.gold { background: var(--gold-bg); color: var(--gold); border: 1px solid #cfe6ae; }
+    .feature-icon.gold { background: var(--gold-bg); color: var(--gold); border: 1px solid var(--border); }
     .feature-icon.teal { background: #ccfbf1; color: #0d9488; }
     .feature-icon.indigo { background: #e0e7ff; color: #4f46e5; }
     .feature-icon.rose { background: #ffe4e6; color: #e11d48; }
@@ -1105,13 +1105,15 @@
     /* ── New-attorney (WA) additions ── */
     /* Offer ribbon under hero */
     .offer-ribbon {
-      background: var(--gold);
-      color: #3a2a08;
+      background: var(--light-gray);
+      color: var(--navy);
       text-align: center;
       padding: .875rem 1.5rem;
       font-size: .9375rem;
       font-weight: 500;
       line-height: 1.5;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
     }
     .offer-ribbon strong { font-weight: 700; }
     .offer-ribbon .code {
@@ -1123,7 +1125,7 @@
       font-weight: 700;
       letter-spacing: .04em;
     }
-    .offer-ribbon svg { width: 18px; height: 18px; vertical-align: -4px; margin-right: 4px; }
+    .offer-ribbon svg { width: 18px; height: 18px; vertical-align: -4px; margin-right: 4px; color: var(--gold); }
 
     /* Hero trust lines (replaces stat block) */
     .hero-trust { list-style: none; display: flex; flex-direction: column; gap: .65rem; }
@@ -1145,8 +1147,8 @@
     .offer-card-code b { font-family: 'Merriweather', serif; letter-spacing: .05em; }
 
     /* Offer band (full section) */
-    .offer-sec { background: var(--gold-bg); border-top: 1px solid #e3efd3; border-bottom: 1px solid #e3efd3; }
-    .offer-band { background: var(--white); border: 1px solid #cfe6ae; border-radius: 16px; box-shadow: var(--shadow-lg); max-width: 720px; margin: 0 auto; padding: 2.5rem; text-align: center; }
+    .offer-sec { background: var(--light-gray); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+    .offer-band { background: var(--white); border: 1px solid var(--border); border-radius: 16px; box-shadow: var(--shadow-lg); max-width: 720px; margin: 0 auto; padding: 2.5rem; text-align: center; }
     .offer-band .amount { font-family: 'Merriweather', serif; font-size: 2.75rem; font-weight: 900; color: var(--navy); line-height: 1.05; margin-bottom: .25rem; }
     .offer-band .amount small { font-size: 1rem; font-weight: 400; color: var(--text-muted); font-family: 'Inter', sans-serif; }
     .offer-band .lead-in { color: var(--slate); max-width: 520px; margin: 0 auto 1rem; }
@@ -1158,7 +1160,7 @@
     .offer-fine { font-size: .8rem; color: var(--text-muted); margin-top: 1.25rem; }
 
     /* Washington section tint */
-    .wa-sec { background: var(--gold-bg); border-top: 1px solid #e3efd3; }
+    .wa-sec { background: var(--light-gray); border-top: 1px solid var(--border); }
 
     /* Trio cards (reused) */
     .trio-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
@@ -1175,7 +1177,7 @@
     .fit-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; max-width: 900px; margin: 0 auto; }
     @media (max-width: 700px) { .fit-grid { grid-template-columns: 1fr; } }
     .fit-card { border-radius: var(--radius); padding: 2rem; }
-    .fit-card.yes { background: #f0fdf4; border: 1px solid #bbf7d0; }
+    .fit-card.yes { background: var(--light-gray); border: 1px solid var(--border); }
     .fit-card.maybe { background: var(--white); border: 1px solid var(--border); }
     .fit-card h3 { font-family: 'Inter', sans-serif; font-size: 1.05rem; color: var(--navy); margin-bottom: 1rem; display: flex; gap: .5rem; align-items: center; }
     .fit-card h3 svg { width: 22px; height: 22px; flex-shrink: 0; }
@@ -1226,9 +1228,9 @@
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"/></svg>
           1-800-637-1260
         </a>
-        <a href="mailto:info@legalplus.com">
+        <a href="mailto:tech@legalplus.com">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"/></svg>
-          info@legalplus.com
+          tech@legalplus.com
         </a>
       </div>
     </div>
@@ -1250,7 +1252,6 @@
         <li><a href="#offer">The Offer</a></li>
         <li><a href="#what">What It Does</a></li>
         <li><a href="#washington">Built for WA</a></li>
-        <li><a href="https://legalpluscloud.com">Log In</a></li>
         <li><a href="#get-started" class="nav-cta">
           Get Me Set Up
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" width="16" height="16"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg>
@@ -1283,13 +1284,13 @@
           </li>
         </ul>
         <div class="hero-actions" style="margin-top:2rem">
-          <a href="#get-started" class="btn btn-gold">
+          <a href="#get-started" class="btn btn-white">
             Get me set up &mdash; $10/mo for 3 months
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" width="18" height="18"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg>
           </a>
           <a href="#what" class="btn btn-outline">See what it does</a>
         </div>
-        <p class="hero-note">Use code <strong>NEWBAR</strong>. Includes full cloud access and a complimentary 1:1 setup session.</p>
+        <p class="hero-note">Includes full cloud access and a complimentary 1:1 setup session.</p>
       </div>
       <div class="hero-visual">
         <div class="offer-card">
@@ -1317,9 +1318,6 @@
               </li>
             </ul>
           </div>
-          <div class="offer-card-code">
-            Enter code <b>NEWBAR</b> at signup
-          </div>
         </div>
       </div>
     </div>
@@ -1328,7 +1326,7 @@
   <!-- Offer ribbon -->
   <div class="offer-ribbon">
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5"/></svg>
-    <strong>Just admitted to the Washington bar?</strong> Get set up for $10/mo for your first 3 months with code <span class="code">NEWBAR</span> &middot; 1:1 setup session included
+    <strong>Just admitted to the Washington bar?</strong> Get set up for $10/mo for your first 3 months &middot; 1:1 setup session included
   </div>
 
   <!-- Social proof bar -->
@@ -1381,7 +1379,6 @@
             Washington forms and child-support calculations, kept current for you
           </li>
         </ul>
-        <div class="offer-code">Use code <b>NEWBAR</b> at signup</div>
         <p class="offer-fine">No setup fee &middot; no contract &middot; 30-day money-back guarantee</p>
         <div style="margin-top:1.5rem">
           <a href="#get-started" class="btn btn-gold">Get me set up</a>
@@ -1442,8 +1439,8 @@
             <div class="feature-card-icon amber">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z"/></svg>
             </div>
-            <h4>FormsPlus</h4>
-            <p>183+ state-specific family law forms</p>
+            <h4>FormPak</h4>
+            <p>460+ state-specific forms</p>
           </div>
           <div class="feature-card">
             <div class="feature-card-icon green">
@@ -1456,7 +1453,7 @@
             <div class="feature-card-icon purple">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3v11.25A2.25 2.25 0 0 0 6 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0 1 18 16.5h-2.25m-7.5 0h7.5m-7.5 0-1 3m8.5-3 1 3m0 0 .5 1.5m-.5-1.5h-9.5m0 0-.5 1.5m.75-9 3-3 2.148 2.148A12.061 12.061 0 0 1 16.5 7.605"/></svg>
             </div>
-            <h4>Law Online</h4>
+            <h4>Context Law</h4>
             <p>Instant access to relevant statutes</p>
           </div>
         </div>
@@ -1542,7 +1539,7 @@
         <h3>Not ready to decide? Start here, free.</h3>
         <p>Navigate Changes in Washington Child Support with our Guide. We are giving you a plain-English quick-start on what's changed in Washington's forms and calculations, and how to stay current. No purchase needed.</p>
       </div>
-      <a href="https://drive.google.com/file/d/1BKF5T-YIauMDRtacBZdENj1OAhX3MN4g/view" class="btn btn-gold" target="_blank" rel="noopener">Download the toolkit</a>
+      <a href="https://drive.google.com/file/d/1BKF5T-YIauMDRtacBZdENj1OAhX3MN4g/view" class="btn btn-white" target="_blank" rel="noopener">Download the toolkit</a>
     </div>
   </section>
 
@@ -1552,7 +1549,7 @@
       <div class="lead-form-inner">
         <span class="section-label">Get Started</span>
         <h2>Get me set up</h2>
-        <p>Tell us a little about yourself and we'll get your account and complimentary setup session scheduled. $10/mo for your first 3 months with code <strong>NEWBAR</strong>.</p>
+        <p>Tell us a little about yourself and we'll get your account and complimentary setup session scheduled. $10/mo for your first three months.</p>
         <form class="lead-form" onsubmit="handleFormSubmit(event)">
           <div class="form-group">
             <label for="name">Name</label>
@@ -1582,7 +1579,7 @@
           </div>
           <div class="full-width">
             <button type="submit" class="btn btn-gold">Get me set up</button>
-            <p class="form-fine-print">Uses code <strong>NEWBAR</strong> &middot; $10/mo for 3 months, then $45/mo &middot; no setup fee &middot; no contract &middot; 30-day money-back guarantee.<br>Prefer to read first? <a href="https://drive.google.com/file/d/1BKF5T-YIauMDRtacBZdENj1OAhX3MN4g/view" target="_blank" rel="noopener" style="color:var(--navy);font-weight:600">Just send me the toolkit.</a></p>
+            <p class="form-fine-print">$10/mo for 3 months, then $45/mo &middot; no setup fee &middot; no contract &middot; 30-day money-back guarantee.<br>Prefer to read first? <a href="https://drive.google.com/file/d/1BKF5T-YIauMDRtacBZdENj1OAhX3MN4g/view" target="_blank" rel="noopener" style="color:var(--navy);font-weight:600">Just send me the toolkit.</a></p>
             <p class="form-fine-print" style="margin-top:.75rem">After you submit, we'll email your access and schedule your setup session within one business day.</p>
           </div>
         </form>
@@ -1601,7 +1598,7 @@
           <p>Legal+Plus Software Group, Inc.<br>Washington family law software for over 36 years.</p>
           <p style="margin-top:.75rem">
             <a href="tel:1-800-637-1260" style="color:var(--gold-light);text-decoration:none">1-800-637-1260</a><br>
-            <a href="mailto:info@legalplus.com" style="color:rgba(255,255,255,.7);text-decoration:none">info@legalplus.com</a>
+            <a href="mailto:tech@legalplus.com" style="color:rgba(255,255,255,.7);text-decoration:none">tech@legalplus.com</a>
           </p>
         </div>
         <div class="footer-col">
@@ -1624,7 +1621,7 @@
           <h4>Contact</h4>
           <ul>
             <li><a href="tel:1-800-637-1260">1-800-637-1260</a></li>
-            <li><a href="mailto:info@legalplus.com">info@legalplus.com</a></li>
+            <li><a href="mailto:tech@legalplus.com">tech@legalplus.com</a></li>
           </ul>
         </div>
       </div>
