@@ -14,6 +14,12 @@
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
+    @font-face {
+      font-family: 'FS Himalaya';
+      src: url('himalaya.ttf') format('truetype');
+      font-display: swap;
+    }
+
     :root {
       --navy: #1e3a5f;
       --navy-dark: #152c4a;
@@ -114,9 +120,9 @@
       line-height: 1.15;
     }
     .nav-brand-name {
-      font-family: 'Merriweather', serif;
-      font-weight: 900;
-      font-size: 1.25rem;
+      font-family: 'FS Himalaya', Georgia, serif;
+      font-weight: 400;
+      font-size: 1.7rem;
       color: var(--navy);
     }
     .nav-brand-sub {
@@ -622,10 +628,10 @@
       margin-bottom: .75rem;
     }
     .feature-card-icon svg { width: 20px; height: 20px; }
-    .feature-card-icon.blue { background: #dbeafe; color: #2563eb; }
-    .feature-card-icon.amber { background: #fef3c7; color: #d97706; }
-    .feature-card-icon.green { background: #dcfce7; color: #16a34a; }
-    .feature-card-icon.purple { background: #f3e8ff; color: #9333ea; }
+    .feature-card-icon.blue,
+    .feature-card-icon.amber,
+    .feature-card-icon.green,
+    .feature-card-icon.purple { background: #eef2f7; color: var(--navy); }
     .feature-card h4 {
       font-family: 'Inter', sans-serif;
       font-size: .875rem;
@@ -1271,7 +1277,7 @@
         <h1>Confidence and ease, from your <span>very first case.</span></h1>
         <p class="hero-desc">
           FamilySoft is the Washington-specific document and child-support software that family law
-          offices and courts across the state have relied on since 1988.
+          offices and courts across the state have relied on since 1988. It also helps you divide the property in a divorce.
         </p>
         <ul class="hero-trust">
           <li>
@@ -1306,7 +1312,7 @@
               </li>
               <li>
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg>
-                A complimentary 1:1 online setup session
+                A complimentary one-on-one online setup session
               </li>
               <li>
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg>
@@ -1393,7 +1399,7 @@
       <div class="what-is-grid">
         <div class="what-is-content">
           <span class="section-label">What It Does</span>
-          <h2>Anyone can download the forms. The hard part is everything after.</h2>
+          <h2>Anyone can download the forms. The hard part is made easy by FamilySoft.</h2>
           <p>
             Keeping names, dates, and numbers consistent across a whole set of connected documents,
             and staying current as Washington keeps changing them. FamilySoft handles both.
@@ -1405,25 +1411,25 @@
             </li>
             <li>
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg>
-              <span><strong>Only what's relevant.</strong> Condense large document sets down to what matters for this client and this matter.</span>
+              <span><strong>Only what's relevant.</strong> Automatically clear away messy checkboxes with the &ldquo;condense&rdquo; feature &mdash; it strips excess unused verbiage and consolidates fragmented phrases into clean sentences, leaving only what matters for this client and this matter.</span>
             </li>
             <li>
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg>
-              <span><strong>Always current.</strong> Washington updates its forms and calculations regularly. FamilySoft keeps them current, so you never file from an outdated version.</span>
+              <span><strong>Always current.</strong> Washington updates its forms and calculations regularly. FamilySoft keeps them current, so your client's information is always expressed in the latest forms, never an outdated version.</span>
             </li>
             <li>
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg>
-              <span><strong>Accurate calculations.</strong> Child support and financial figures calculated to Washington methodology, not by hand.</span>
+              <span><strong>Accurate calculations.</strong> Child support and financial numbers calculated using Washington's approved formulas.</span>
             </li>
             <li>
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg>
-              <span><strong>Consistency across forms.</strong> Enter the case facts once; they carry across related pleadings, declarations, and orders.</span>
+              <span><strong>Consistency across forms.</strong> Enter the case facts once &mdash; or have your client enter them &mdash; and that information carries across related pleadings, declarations, and orders.</span>
             </li>
           </ul>
           <div class="platform-pills">
             <span class="platform-pill">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418"/></svg>
-              Works in any browser, on any device
+              Works on any tablet, iPad, or computer
             </span>
           </div>
         </div>
@@ -1451,7 +1457,7 @@
           </div>
           <div class="feature-card">
             <div class="feature-card-icon purple">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3v11.25A2.25 2.25 0 0 0 6 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0 1 18 16.5h-2.25m-7.5 0h7.5m-7.5 0-1 3m8.5-3 1 3m0 0 .5 1.5m-.5-1.5h-9.5m0 0-.5 1.5m.75-9 3-3 2.148 2.148A12.061 12.061 0 0 1 16.5 7.605"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25"/></svg>
             </div>
             <h4>Context Law</h4>
             <p>Instant access to relevant statutes</p>
@@ -1489,7 +1495,7 @@
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>
           </div>
           <h3>Decades of Washington practice</h3>
-          <p>Built from over 36 years of real Washington family law work, and kept current as the state's rules change.</p>
+          <p>Based on actual feedback from family law practitioners since 1988, always following the law as the rules have changed.</p>
         </div>
       </div>
     </div>
